@@ -1,0 +1,15 @@
+123 : привет
+[ 123 ] private [ qwerty ] : привет
+123 : привет
+[ 123 ] private [ qwerty ] : привет
+123 : привет
+[ 123 ] private [ qwerty ] : привет
+123 : привет
+[ 123 ] private [ qwerty ] : привет
+nick3 : sssssssss
+[ nick3 ] private [ qwerty ] : lkjlkj
+123 : ewrewr
+qwerty : ewrewrewr
+qwerty : yuoiuo
+qwerty : asdffsafd
+qwerty : asdsad
