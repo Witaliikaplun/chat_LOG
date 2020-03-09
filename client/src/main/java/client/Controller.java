@@ -160,11 +160,11 @@ public class Controller implements Initializable {
                         }
                     }
                 } catch (SocketException e) {
-                    System.out.println("Сервер отключился");
+                    System.out.println("Сервер отключился ");
                     setAuthenticated(false);
                 } catch (IOException e) {
 //                    e.printStackTrace();
-                    System.out.println("Соединение с сервером разорвано");
+                    System.out.println("Соединение с сервером разорвано ");
                 } finally {
                     try {
                         socket.close();
