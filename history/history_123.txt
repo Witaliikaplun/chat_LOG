@@ -20,3 +20,6 @@ nick1 : edwdewd
 123 : 2e32e
 nick2 : wqrwer
 qwerty : werewr
+123 : ddd
+123 : fff
+[ 123 ] private [ qwerty ] : ededed

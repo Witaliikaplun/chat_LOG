@@ -12,7 +12,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Server {
-    private ExecutorService service = Executors.newFixedThreadPool(4);
+    //private ExecutorService service = Executors.newFixedThreadPool(4);
+    private ExecutorService service = Executors.newCachedThreadPool();
     private Vector<ClientHandler> clients;
     private AuthService authService;
 
