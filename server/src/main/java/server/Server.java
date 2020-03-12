@@ -8,8 +8,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 import java.util.Vector;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Server {
+    private ExecutorService service = Executors.newFixedThreadPool(4);
     private Vector<ClientHandler> clients;
     private AuthService authService;
 
@@ -35,13 +38,19 @@ public class Server {
             while (true) {
                 socket = server.accept();
                 System.out.println("Клиент подключился");
-                new ClientHandler(socket, this);
+                Socket finalSocket = socket;
+                service.execute(()->{
+                    new ClientHandler(finalSocket, this).handle();
+                });
+                //service.shutdown();//разобраться
+
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
             SQLHandler.disconnect();
+            service.shutdown();
             try {
                 server.close();
             } catch (IOException e) {

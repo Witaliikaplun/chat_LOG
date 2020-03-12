@@ -7,3 +7,12 @@ qwerty : yuoiuo
 qwerty : asdffsafd
 qwerty : asdsad
 nick3 : eee
+qwerty : ewcdec
+qwerty : wede3
+nick3 : ececx
+[ 123 ] private [ nick3 ] : wedwed
+[ nick3 ] private [ 123 ] : efedcx
+nick1 : edwdewd
+123 : 2e32e
+nick2 : wqrwer
+qwerty : werewr
