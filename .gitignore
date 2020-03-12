@@ -1,5 +1,7 @@
 /.idea
 *.iml
+*.zip
+
 
 # Project exclude paths
 /client/target/
