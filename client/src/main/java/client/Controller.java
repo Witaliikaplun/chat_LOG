@@ -58,8 +58,6 @@ public class Controller implements Initializable {
 
     List<String> list;
 
-
-
     public void setAuthenticated(boolean authenticated) {
         this.authenticated = authenticated;
         authPanel.setVisible(!authenticated);
@@ -68,8 +66,6 @@ public class Controller implements Initializable {
         msgPanel.setManaged(authenticated);
         clientList.setVisible(authenticated);
         clientList.setManaged(authenticated);
-
-
 
         if (!authenticated) {
             nickname = "";
@@ -100,7 +96,6 @@ public class Controller implements Initializable {
                 }
             });
         });
-
     }
 
     public void connect() {
@@ -153,18 +148,16 @@ public class Controller implements Initializable {
 
                         } else {
 
-
-                            list.add(str + "\n");
-                            textArea.appendText(str + "\n");
-
+                            list.add(str + "\n"); //добавляем  переписку в List
+                            textArea.appendText(str + "\n");  //добавляем  переписку в textArea
                         }
                     }
                 } catch (SocketException e) {
-                    System.out.println("Сервер отключился ");
+                    System.out.println("Сервер отключился!");
                     setAuthenticated(false);
                 } catch (IOException e) {
 //                    e.printStackTrace();
-                    System.out.println("Соединение с сервером разорвано ");
+                    System.out.println("Соединение с сервером разорвано!");
                 } finally {
                     try {
                         socket.close();
@@ -258,7 +251,7 @@ public class Controller implements Initializable {
     }
     public void writeFile(File file){
         try(BufferedWriter out = new BufferedWriter(new FileWriter(file, true))) {
-            if (!file.exists()) {
+            if (!file.exists()) { //если нет файла, то создадим его
                 file.createNewFile();
             }
             //FileWriter out = new FileWriter(file, true);
@@ -305,7 +298,7 @@ public class Controller implements Initializable {
         return countRows;
     }
 
-    public StringBuffer outMy(List<String> L){
+    public StringBuffer outMy(List<String> L){  //метод записи из ArrayList в StringBuffer
         StringBuffer s = new StringBuffer();
         for (String l: L) {
             s.append(l);
